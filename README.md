@@ -5,9 +5,9 @@ A multilingual AI assistant for delivery personnel at your own house. This agent
 ## Features
 
 - **Multilingual Support**: Primary interaction in Hindi with English welcome message
-- **Voice Recognition**: Real-time speech-to-text using Deepgram Nova-3
+- **Voice Recognition**: Real-time speech-to-text using Sarvam Saarika-v2.5
 - **Natural Language Processing**: Powered by OpenAI GPT-4o-mini
-- **Text-to-Speech**: High-quality voice synthesis using Cartesia Sonic-2
+- **Text-to-Speech**: High-quality voice synthesis using Sarvam Bulbul-v2 (Anushka)
 - **Noise Cancellation**: Enhanced audio processing for telephony applications
 - **Turn Detection**: Intelligent conversation flow management
 
@@ -44,9 +44,8 @@ python agent.py download-files
 Create a `.env` file in the project root directory with the following environment variables:
 
 ```env
-DEEPGRAM_API_KEY=your_deepgram_api_key_here
+SARVAM_API_KEY=your_sarvam_api_key_here
 OPENAI_API_KEY=your_openai_api_key_here
-CARTESIA_API_KEY=your_cartesia_api_key_here
 LIVEKIT_URL=your_livekit_url_here
 LIVEKIT_API_KEY=your_livekit_api_key_here
 LIVEKIT_API_SECRET=your_livekit_api_secret_here
@@ -54,17 +53,13 @@ LIVEKIT_API_SECRET=your_livekit_api_secret_here
 
 #### Required API Keys:
 
-- **Deepgram API Key**: For speech-to-text functionality
-  - Sign up at [Deepgram](https://deepgram.com/)
+- **Sarvam API Key**: For both speech-to-text and text-to-speech functionality
+  - Sign up at [Sarvam AI](https://sarvam.ai/)
   - Get your API key from the dashboard
 
 - **OpenAI API Key**: For natural language processing
   - Sign up at [OpenAI](https://openai.com/)
   - Generate an API key in your account settings
-
-- **Cartesia API Key**: For text-to-speech functionality
-  - Sign up at [Cartesia](https://cartesia.ai/)
-  - Obtain your API key from the platform
 
 - **LiveKit Credentials**: For real-time communication
   - Sign up at [LiveKit](https://livekit.io/)

@@ -4,10 +4,9 @@ from livekit import agents
 from livekit.agents import AgentSession, Agent, RoomInputOptions
 from livekit.plugins import (
     openai,
-    cartesia,
-    deepgram,
     noise_cancellation,
     silero,
+    sarvam
 )
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
@@ -47,9 +46,15 @@ class Assistant(Agent):
 
 async def entrypoint(ctx: agents.JobContext):
     session = AgentSession(
-        stt=deepgram.STT(model="nova-3", language="multi"),
+        stt=sarvam.STT(
+            language="hi-IN",
+            model="saarika:v2.5",
+        ),
         llm=openai.LLM(model="gpt-4o-mini"),
-        tts=cartesia.TTS(model="sonic-2", voice="791d5162-d5eb-40f0-8189-f19db44611d8", language="hi"),
+        tts=sarvam.TTS(
+            target_language_code="hi-IN",
+            speaker="anushka",
+        ),
         vad=silero.VAD.load(),
         turn_detection=MultilingualModel(),
     )
